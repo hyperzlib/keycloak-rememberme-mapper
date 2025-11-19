@@ -6,15 +6,13 @@
 
     <groupId>cn.isekai.keycloak</groupId>
     <artifactId>rememberme-mapper-extension</artifactId>
-    <version>1.1</version>
+    <version>1.2</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <keycloak.version>15.0.2</keycloak.version>
-        <minio.version>7.0.2</minio.version>
-        <jboss-jaxrs-api_2.1_spec>2.0.1.Final</jboss-jaxrs-api_2.1_spec>
+        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <keycloak.version>26.4.0</keycloak.version>
     </properties>
 
 
@@ -44,6 +42,13 @@
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-services</artifactId>
             <version>${keycloak.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.auto.service</groupId>
+            <artifactId>auto-service</artifactId>
+            <version>1.0.1</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>

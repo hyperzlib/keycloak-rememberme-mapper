@@ -1,10 +1,12 @@
 package cn.isekai.keycloak.rememberMe.protocol.oidc.mappers;
 
+import com.google.auto.service.AutoService;
 import org.keycloak.events.Details;
 import org.keycloak.models.ClientSessionContext;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.ProtocolMapperModel;
 import org.keycloak.models.UserSessionModel;
+import org.keycloak.protocol.ProtocolMapper;
 import org.keycloak.protocol.oidc.OIDCLoginProtocol;
 import org.keycloak.protocol.oidc.mappers.*;
 import org.keycloak.provider.ProviderConfigProperty;
@@ -16,6 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@AutoService(ProtocolMapper.class)
 public class RememberMeMapper extends AbstractOIDCProtocolMapper implements OIDCAccessTokenMapper, OIDCIDTokenMapper, UserInfoTokenMapper {
     private static final List<ProviderConfigProperty> configProperties = new ArrayList<>();
 
